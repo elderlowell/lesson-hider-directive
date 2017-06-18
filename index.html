@@ -6,7 +6,8 @@
   </head>
   <body ng-controller="lessonCtrl">
     <ul>
-      <lesson-hider ng-repeat="lesson in lessons" lesson="lesson"></lesson-hider>
+      <input type="checkbox" ng-model="checked"/>Check to cross out lessons in schedule.
+      <lesson-hider ng-repeat="lesson in lessons" lesson="lesson" cross-out="checked" day-alert="announceDay(lesson, day)"></lesson-hider>
     </ul>
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
